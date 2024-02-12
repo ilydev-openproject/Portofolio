@@ -79,6 +79,7 @@ export default function Home() {
           <Row className="g-3">
             <Col sm="6" md="6" lg="6  ">
               <Image src="/img/ily.png" width={500} height={500} style={{ objectFit: "cover", objectPosition: "top center" }} />
+              <span></span>
             </Col>
           </Row>
         </Container>
