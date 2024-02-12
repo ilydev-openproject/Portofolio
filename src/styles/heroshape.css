@@ -1,0 +1,62 @@
+:root {
+    --rand: 0;
+  }
+  
+    .shape {
+      position: absolute;
+      top: calc(20vh * (var(--rand) - 0.5));
+      left: calc(50vw * var(--rand));
+    }
+    .shape {
+        position: absolute;
+        border-radius: 50%;
+    }
+  
+    .circle {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #FF00FF;
+    }
+
+    .square {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #7A7DAF;
+    }
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 87px solid #f39c12;
+    }
+
+    .rectangle {
+        width: 50px;
+        height: 10px;
+        background-color: #EDECFE;
+    }
+
+    /* Animasi untuk efek berserakan */
+    @keyframes moveShape {
+        0% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-200px) rotate(360deg);
+        }
+        100% {
+            transform: translateY(0) rotate(720deg);
+        }
+    }
+  
+    /* Menerapkan animasi ke bentuk */
+    .shape {
+        animation: moveShape 10s linear infinite;
+    }
+
+    /* Menerapkan gaya secara acak */
+    .shape:nth-child(odd) {
+        animation-direction: reverse;
+    }
