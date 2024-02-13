@@ -2,8 +2,8 @@
 
 
 // color
-$primary: #FF0090;
-$secondary: #1DBEB8;
+$primary: #2EC5D1;
+$secondary: #58d0da;
 
 
 .bg-primary{
@@ -34,8 +34,7 @@ $secondary: #1DBEB8;
 
 .hero{
     position: relative;
-    height: fit-content;
-    margin: 50px 0;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -46,7 +45,7 @@ $secondary: #1DBEB8;
         position: absolute;
         top: 50%;
         left: 0;
-        transform: translateY(-50%);
+        transform: translateY(-60%);
         color: #adadad;
         font-weight: 1000;
         font-size: 500px;
@@ -131,8 +130,14 @@ $secondary: #1DBEB8;
         width: 100%;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: start;
+        align-items: center;
         .span1{
-            font-size: 80px;
+            @media screen and (max-width: 992px) {
+                font-size: 44px;
+            }
+            font-size: 64px;
             font-weight: 800;
             animation: type1 9s steps(20) infinite;
             border-right: 3px solid $primary;
@@ -144,7 +149,10 @@ $secondary: #1DBEB8;
             color: $primary;
         }
         .span2{
-            font-size: 80px;
+            @media screen and (max-width: 992px) {
+                font-size: 44px;
+            }
+            font-size: 64px;
             font-weight: 800;
             animation: type2 9s steps(20) infinite 3s;
             border-right: 3px solid $primary;
@@ -157,7 +165,10 @@ $secondary: #1DBEB8;
             opacity: 0;
         }
         .span3{
-            font-size: 80px;
+            @media screen and (max-width: 992px) {
+                font-size: 44px;
+            }
+            font-size: 64px;
             font-weight: 800;
             animation: type 9s steps(20) infinite 6s;
             border-right: 3px solid $primary;
@@ -290,19 +301,202 @@ $secondary: #1DBEB8;
             }
         }
     }
-    h3{
-        font-size: 24px;
+    h2{
+        // font-size: 24px;
         font-weight: 700;
-        color: #7C7C7C;
+        color: #303030;
+    }
+    p{
+        font-size: 16px;
+        color: #696969;
     }
 }
 
 #about{
-    img{
-        background: url(../../public/img/blob.svg);
-        height: 100%;
-        width: 100%;
-        background-repeat: no-repeat;
+    .images{
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        // overflow: hidden;
+        position: relative;
+        .knop{
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+            filter: blur(50px);
+            z-index: 1;
+            
+        }
+        #kn1{
+            top: 0;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: #3376D2;
+        }
+        #kn2{
+            top: 0;
+            left: 10%;
+            width: 200px;
+            height: 200px;
+            background: #33D28F;
+        }
+        @media screen and (max-width:768px) {
+            width: 100%;
+            height: 100%;
+        }
+        .hoverme{
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) !important;
+            z-index: 6;
+            background-color: #adadad;
+            padding: 5px 10px;
+            border-radius: 16px;
+            opacity: 1;
+            transition: all .5s ease-in-out;
+            span{
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        img{
+            background: url(../../public/img/blob.svg);
+            filter: blur(5px);
+            transition: all .5s ease-in-out;
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 5;
+        }
+        cursor: pointer;
+        &:hover{
+            .hoverme{
+                opacity: 0;
+            }
+            img{
+                filter: none;
+            }
+        }
+    }
+     .header{
+        span{
+            font-size: 24px;
+            font-weight: 600;
+            color: #303030;
+        }
+     }
+     p{
+        font-size: 20px;
+        color: 303030;
+     }
+     .btngroup{
+        .btn{
+            background: $primary;
+            border-radius: 16px;
+            padding: 10px 20px;
+            width: fit-content;
+            span{
+                font-size: 16px;
+                font-weight: 500;
+                color: #fff;
+                font-weight: 500;
+            }
+            &:hover{
+                background: $secondary;
+            }
+        }
+     }
+}
+
+// section tech
+.wrapper-tech{
+    overflow-x: hidden;
+    background: #007783;
+    padding: 70px 0;
+    margin: 50px auto;
+    h3{
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .tech1, .tech2{
+        // overflow-x: hidden;
+        .sliderb {
+            display: flex;
+            animation: slideToLeft 15s linear infinite;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+        .slidert {
+            display: flex;
+            animation: slideToRight 15s linear infinite;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+        @keyframes slideToLeft {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+        }
+        @keyframes slideToRight {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(100%);
+            }
+        }
+        &:hover{
+            .sliderb, .slidert{
+                animation-play-state: paused;
+            }
+        }
+        .tech-item{
+            background-color: #FFF;
+            width: 311px;
+            height: 112px;
+            padding: 8px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 13px;outline: 3px solid transparent;
+            border-radius: 20px;
+            img{
+                width: auto !important;
+                height: 100% !important;
+            }
+            &:hover{
+                outline: 5px solid #EC8620;
+            }
+            .gtext{
+                margin-left: 0;
+                h4{
+                    color: #303030;
+                    font-family: Poppins;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+                span{
+                    color: #303030;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
     }
 }
 
