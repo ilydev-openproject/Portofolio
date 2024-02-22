@@ -412,6 +412,86 @@ $secondary: #58d0da;
      }
 }
 
+.portofolio{
+    width: 100%;
+    
+    .header{
+        h2{
+            font-weight: 700;
+            color: #303030;
+        }
+    }
+    .nav{
+        border: .5px solid #b7b7b7;
+        width: fit-content;
+        border-radius: 30px;
+        margin: 0;
+        overflow: hidden;
+        .nav-link{
+            padding: 10px 40px;
+            height: 100%;
+            color: #303030;
+            &:hover{
+                background-color: $primary;
+            }
+        }
+        .active{
+            background-color: $primary;
+        }
+    }
+    .portfiles{
+        width: 100%;
+        overflow: hidden;
+    }
+    .card{
+        background: #7C7C7C;
+        overflow: hidden;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 4px 16px 20px -4px rgba(0,0,0,0.45);
+        .card-body{
+            height: 300px;
+            img{
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+    }
+}
+
+
+footer{
+    padding: 80px 0;
+    background: #f8f8f8;
+    h2{
+        font-size: 36px;
+        font-weight: 700;
+    }
+    p{
+        color: $primary;
+    }
+    .footmedsos{
+        .medsos-link{
+            margin: 0 4px;
+            padding: 8px;
+            border-radius: 50%;
+            border: 2px solid #e0e0e0;
+            transition: all ease-in-out;
+            a{
+                text-decoration: none;
+                color: #303030 !important;
+            }
+            &:hover{
+                background-color: $primary;
+                a{
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}
 // section tech
 .wrapper-tech{
     overflow-x: hidden;

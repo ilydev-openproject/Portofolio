@@ -395,6 +395,84 @@
   background: #58d0da;
 }
 
+.portofolio {
+  width: 100%;
+}
+.portofolio .header h2 {
+  font-weight: 700;
+  color: #303030;
+}
+.portofolio .nav {
+  border: 0.5px solid #b7b7b7;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  margin: 0;
+  overflow: hidden;
+}
+.portofolio .nav .nav-link {
+  padding: 10px 40px;
+  height: 100%;
+  color: #303030;
+}
+.portofolio .nav .nav-link:hover {
+  background-color: #2EC5D1;
+}
+.portofolio .nav .active {
+  background-color: #2EC5D1;
+}
+.portofolio .portfiles {
+  width: 100%;
+  overflow: hidden;
+}
+.portofolio .card {
+  background: #7C7C7C;
+  overflow: hidden;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 4px 16px 20px -4px rgba(0, 0, 0, 0.45);
+}
+.portofolio .card .card-body {
+  height: 300px;
+}
+.portofolio .card .card-body img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+footer {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+footer h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+footer p {
+  color: #2EC5D1;
+}
+footer .footmedsos .medsos-link {
+  margin: 0 4px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  transition: all ease-in-out;
+}
+footer .footmedsos .medsos-link a {
+  text-decoration: none;
+  color: #303030 !important;
+}
+footer .footmedsos .medsos-link:hover {
+  background-color: #2EC5D1;
+}
+footer .footmedsos .medsos-link:hover a {
+  color: #fff !important;
+}
+
 .wrapper-tech {
   overflow-x: hidden;
   background: #007783;

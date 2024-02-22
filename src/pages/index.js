@@ -17,6 +17,10 @@ export default function Home() {
       </Typist>
     );
   };
+
+  const AutoSize = () => {
+    return "100%";
+  };
   return (
     <main>
       <section>
@@ -104,7 +108,10 @@ export default function Home() {
       </section>
       <section>
         <div className="wrapper-tech text-center">
-          <div className="tech1 mt-5 mb-4 d-flex justify-content-end align-items-center" data-aos="fade-up" data-aos-duration="800">
+          <div className="container" data-aos="fade-up" data-aos-duration="800">
+            <h3>My Favorite Tech</h3>
+          </div>
+          <div className="tech1 my-5 mb-4 d-flex justify-content-end align-items-center" data-aos="fade-up" data-aos-duration="800">
             <div className="slidert gt1 d-flex justify-content-end align-items-center">
               <div className="tech-item mx-3 d-flex justify-content-start align-items-center">
                 <Image src="/img/tech/figma.webp" alt="agcenna assets" className="img-fluid" width={500} height={500} style={{ width: "100%", height: "auto" }} />
@@ -313,6 +320,78 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <div className="portofolio py-3">
+          <Container>
+            <div className="header my-5">
+              <h2 className="text-center">Simple Portfolios</h2>
+            </div>
+            <nav className="nav mx-auto  ">
+              <a className="nav-link active" href="#" aria-current="page">
+                All
+              </a>
+              <a className="nav-link" href="#">
+                UI Design
+              </a>
+              <a className="nav-link" href="#">
+                Frondend
+              </a>
+              <a className="nav-link" href="#">
+                Backend
+              </a>
+              <a className="nav-link" href="#">
+                Ads
+              </a>
+            </nav>
+            <div className="protfiles my-5">
+              <Row className="g-3">
+                <Col lg={4} xs={6} sm={6} md={3}>
+                  <Card>
+                    <CardBody>
+                      <Image src="/img/uidesign/ui1.jpg" sizes="100vw" fill />
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col lg={4} xs={6} sm={6} md={3}>
+                  <Card>
+                    <CardBody>
+                      <Image src="/img/uidesign/ui2.jpg" sizes="100vw" fill />
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col lg={4} xs={6} sm={6} md={3}>
+                  <Card>
+                    <CardBody>
+                      <Image src="/img/uidesign/ui3.jpg" sizes="100vw" fill />
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col lg={4} xs={6} sm={6} md={3}>
+                  <Card>
+                    <CardBody>
+                      <Image src="/img/uidesign/ui4.jpg" sizes="100vw" fill />
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col lg={4} xs={6} sm={6} md={3}>
+                  <Card>
+                    <CardBody>
+                      <Image src="/img/uidesign/ui5.jpg" sizes="100vw" fill />
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col lg={4} xs={6} sm={6} md={3}>
+                  <Card>
+                    <CardBody>
+                      <Image src="/img/uidesign/ui6.jpg" sizes="100vw" fill />
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
+            </div>
+          </Container>
         </div>
       </section>
     </main>
